@@ -9,22 +9,26 @@
 			$('html, body').animate({scrollTop: $('#'+id).offset().top}, 800);
 		});
 
-		var jcarousel = $('.bk-services-1 .jcarousel');
-		if(jcarousel.length){
-	        jcarousel
+		var jc1 = $('.bk-services-1 .jcarousel');
+		if(jc1.length){
+	        jc1
 	            .jcarousel({
 	                wrap: 'circular'
 	            });
 		}
-
-        $('.jcarousel-control-prev')
-            .jcarouselControl({
-                target: '-=1'
-            });
-
-        $('.jcarousel-control-next')
-            .jcarouselControl({
-                target: '+=1'
-            });
+		var jcPrev = $('.jcarousel-control-prev');
+		if(jcPrev.length){
+	        $('.jcarousel-control-prev')
+	            .jcarouselControl({
+	                target: '-=1'
+	            });
+		};
+		var jcNext = $('.jcarousel-control-next');
+		if(jcNext.length){
+	        $('.jcarousel-control-next')
+	            .jcarouselControl({
+	                target: '+=1'
+	            });
+		};
 	});
 })(jQuery);

@@ -30,5 +30,16 @@
 	                target: '+=1'
 	            });
 		};
+
+		var btnFile = $('.btn-file');
+		if(btnFile.length){
+			btnFile.find('input[type="file"]').on('change', function(){
+				var fileName = $(this).val().split('\\').pop();
+				btnFile.find('.btn-file-text').text(fileName);
+				if($(this).val()== ''){
+					btnFile.find('.btn-file-text').text('Прикрепить файл');
+				}
+			})
+		}
 	});
 })(jQuery);

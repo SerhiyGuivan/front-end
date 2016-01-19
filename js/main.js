@@ -16,6 +16,19 @@
 	                wrap: 'circular'
 	            });
 		}
+		var jc2 = $('.bk-gallery-2 .jcarousel');
+		if(jc2.length){
+	        jc2.
+	        	on('jcarousel:reload jcarousel:create', function () {
+	                var carousel = $(this),
+	                    width = carousel.innerWidth();
+
+	                carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+	            })
+	            .jcarousel({
+	                wrap: 'circular'
+	            });
+		}
 		var jcPrev = $('.jcarousel-control-prev');
 		if(jcPrev.length){
 	        $('.jcarousel-control-prev')

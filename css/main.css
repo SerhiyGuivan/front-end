@@ -43,10 +43,12 @@ body {
 	color: #000;
 	height: 100%;
 }
+.carousel,
 .jcarousel {
 	position: relative;
     overflow: hidden;
 }
+.carousel ul,
 .jcarousel ul {
 	width: 20000em;
     position: relative;
@@ -54,6 +56,7 @@ body {
     margin: 0;
     padding: 0;
 }
+.carousel ul li,
 .jcarousel ul li {
 	float: left;
 }
@@ -1224,6 +1227,30 @@ body {
 .bk-gallery-1 {
 	margin-bottom: 20px;
 }
+.bk-gallery-1 .btn-wrap {
+	text-align: center;
+	margin-top: 20px;
+}
+.bk-gallery-1 .btn-more {
+	font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    outline: none;
+    border: none;
+    background-color: #131b4d;
+    padding: 6px 15px;
+    border-radius: 3px;
+    -webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.bk-gallery-1 .btn-more:active,
+.bk-gallery-1 .btn-more:hover {
+	background-color: #009cde;
+}
+
 .bk-gallery-1 .items {
 	text-align: center
 }
@@ -1375,3 +1402,157 @@ body {
 	height: auto;
 }
 
+@media(min-width: 1200px){
+	.bk-catalog-single-1 .connected-carousels {
+		width: 481px;
+	}	
+}
+
+.bk-catalog-single-1 .carousel-stage img,
+.bk-catalog-single-1 .carousel-navigation img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.bk-catalog-single-1 .stage {
+	margin-bottom: 15px;
+	position: relative;
+}
+.bk-catalog-single-1 .stage .colors-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 5px 5px 5px 15px;
+	border-radius: 0 20px 20px 0;
+}
+.bk-catalog-single-1 .stage .color-label {
+	color:#444964;
+	font-weight: bold;
+	margin-right: 6px;
+}
+.bk-catalog-single-1 .stage .color {
+	margin-right: 2px;
+	cursor: pointer;
+}
+.bk-catalog-single-1 .stage .color img {
+	border-radius: 50%;
+}
+.bk-catalog-single-1 .stage .color:hover img {
+	-webkit-box-shadow: 0 0 0 2px  #009cde;
+	box-shadow: 0 0 0 2px  #009cde;
+}
+
+.bk-catalog-single-1 .navigation {
+	position: relative;
+}
+.bk-catalog-single-1 .navigation .prev,
+.bk-catalog-single-1 .navigation .next {
+	display: block;
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 100%;
+    background: url(../img/jc-controls-sm.png) no-repeat scroll rgba(255,255,255, 0.7);
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    border: 0;
+    z-index: 1;
+}
+.bk-catalog-single-1 .navigation .prev {
+	left: 0;
+    background-position: left;
+}
+.bk-catalog-single-1 .navigation .next {
+	right: 0;
+    background-position: right;
+}
+
+.bk-catalog-single-1 .carousel-navigation li {
+	width: 118px;
+	margin-right: 3px;
+	position: relative;
+	cursor: pointer;
+}
+.bk-catalog-single-1 .carousel-navigation li:before{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/ico-zoom-xs.png) no-repeat scroll center #000;
+	opacity: 0;
+	content: " ";
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+.bk-catalog-single-1 .carousel-navigation li:hover:before {
+	opacity: 0.8;
+}
+.bk-catalog-single-1 .title {
+	font-size: 22px;
+	color:#101742;
+	margin-bottom: 10px;
+}
+.bk-catalog-single-1 .ch-wrap {
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+.bk-catalog-single-1 .ch-title {
+	margin-bottom: 15px;
+	font-size: 15px;
+	font-weight: bold;
+	color:#009cde;
+}
+.bk-catalog-single-1 .ch-items {
+	font-size: 15px;
+	color:#101742;
+}
+.bk-catalog-single-1 .item-label {
+	font-weight: bold;
+} 
+.bk-catalog-single-1 .content-wrap {
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+.bk-catalog-single-1 .content-title {
+	margin-bottom: 15px;
+	font-size: 15px;
+	font-weight: bold;
+	color:#009cde;
+} 
+.bk-catalog-single-1 .content-content {
+	font-size: 15px;
+	color:#101742;
+}
+/*.bk-catalog-menu .navbar-nav {
+    float: none;
+    margin: 0;
+    position: relative;
+}
+.bk-catalog-menu .navbar-nav>li {
+	float: none;
+	position: static;
+}
+.bk-catalog-menu .navbar-nav>li>a {
+	font-size: 16px;
+	color: #6a717b;
+}
+.bk-catalog-menu .navbar-nav>li .dropdown-menu {
+	padding: 0;
+	width: 100%;
+	min-height: 100%;
+	top: 0;
+	left: 100%;
+	background-color: #dde5ec;
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}*/

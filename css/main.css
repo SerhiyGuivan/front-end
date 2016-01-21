@@ -681,6 +681,7 @@ body {
 }
 .breadcrumb li {
 	font-size: 16px;
+	line-height: 22px;
 	color: #6a717b;
 }
 .breadcrumb li a {
@@ -696,6 +697,9 @@ body {
 @media (min-width: 768px){
 	.breadcrumb {
 		padding-left: 60px;
+	}
+	.catalog-single .breadcrumb {
+		padding-left: 0;	
 	}
 	.page-title {
 		padding-left: 60px;	
@@ -1138,6 +1142,13 @@ body {
 		content: " ";
 	}
 }
+.bk-form-feedback-1 > .content .divider {
+	height: 1px;
+	clear: both;
+    margin: 15px;
+    overflow: hidden;
+    background-color: #ddd;
+}
 .bk-form-feedback-1 > .content input[type="text"] {
 	width: 100%;
 	outline: none;
@@ -1401,6 +1412,11 @@ body {
 	max-width: 100%;
 	height: auto;
 }
+.bk-catalog-single-1 .connected-carousels {
+	width: 100%;
+	max-width: 481px;
+	margin: 0 auto;
+}
 
 @media(min-width: 1200px){
 	.bk-catalog-single-1 .connected-carousels {
@@ -1532,7 +1548,26 @@ body {
 	font-size: 15px;
 	color:#101742;
 }
-/*.bk-catalog-menu .navbar-nav {
+.bk-catalog-menu .title {
+	padding: 16px 24px;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: bold;
+	color:#000;
+	background-color: #dde5ec;
+}
+.bk-catalog-menu .title:before {
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../img/cat-menu.png) no-repeat scroll 0 0 transparent;
+	width: 13px;
+	height: 11px;
+	content: " ";
+	margin-right: 15px;
+	position: relative;
+	top: -2px;
+}
+.bk-catalog-menu .navbar-nav {
     float: none;
     margin: 0;
     position: relative;
@@ -1541,12 +1576,28 @@ body {
 	float: none;
 	position: static;
 }
+.bk-catalog-menu .navbar-nav>li + li {
+	border-top: 1px solid #ddd;
+}
+
 .bk-catalog-menu .navbar-nav>li>a {
 	font-size: 16px;
+	padding-left: 24px;
+	padding-right: 40px;
 	color: #6a717b;
+	outline: none;
+	cursor: pointer;
 }
-.bk-catalog-menu .navbar-nav>li .dropdown-menu {
+.bk-catalog-menu .navbar-nav .open>a,
+.bk-catalog-menu .navbar-nav>li>a:hover,
+.bk-catalog-menu .navbar-nav>li>a:focus {
+	background-color: #dde5ec;
+	color:#009cde;
+}
+
+.bk-catalog-menu .dropdown-menu {
 	padding: 0;
+	margin: 0;
 	width: 100%;
 	min-height: 100%;
 	top: 0;
@@ -1555,4 +1606,94 @@ body {
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-}*/
+}
+@media(min-width: 768px){
+	.bk-catalog-menu .dropdown-menu .dropdown-menu {
+		background-color: #d4dee6;
+	}
+}
+
+.bk-catalog-menu .dropdown>a:after{
+	display: inline-block;
+	vertical-align: middle;
+	border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #009cde;
+	content: " ";
+	margin-left: 6px;
+}
+@media(min-width: 768px){
+	.bk-catalog-menu .dropdown>a:after{
+		position: absolute;
+		top: 50%;
+		right: 17px;
+	    margin-top: -5px;
+	    border-left: 13px solid #009cde;
+	    border-top: 5px solid transparent;
+	    border-bottom: 5px solid transparent;
+	}
+}
+.bk-catalog-menu .dropdown-menu>li + li {
+	border-top: 1px solid #e9eff5;
+}
+.bk-catalog-menu .dropdown-menu>li>a {
+	padding-left: 24px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    color:#6a717b;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+@media(min-width: 768px) {
+	.bk-catalog-menu .dropdown-menu>li>a {
+		padding-top: 15px;
+    	padding-bottom: 15px;
+	}
+}
+.bk-catalog-menu .dropdown-menu>li.open>a,
+.bk-catalog-menu .dropdown-menu>li>a:focus, 
+.bk-catalog-menu .dropdown-menu>li>a:hover {
+    background-color: #d4dee6;
+    color:#009cde;    
+}
+
+@media(min-width: 768px){
+	.bk-catalog-menu .dropdown-menu .dropdown-menu>li.open>a,
+	.bk-catalog-menu .dropdown-menu .dropdown-menu>li>a:focus, 
+	.bk-catalog-menu .dropdown-menu .dropdown-menu>li>a:hover {
+	    background-color: #CDD9E2;
+	    color:#009cde;    
+	}
+}
+
+
+.bk-catalog-menu .dropdown-submenu > a:after{
+	display: inline-block;
+	vertical-align: middle;
+	border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #009cde;
+	margin-left: 6px;
+	content: " ";
+}
+@media(min-width: 768px){
+	.bk-catalog-menu .dropdown-submenu >a:after{
+		float: none;
+		position: absolute;
+		top: 50%;
+		margin-right: 0;
+		right: 17px;
+	    margin-top: -5px;
+	    border-left: 13px solid #009cde;
+	    border-top: 5px solid transparent;
+	    border-bottom: 5px solid transparent;
+	}
+}
+.bk-catalog-menu .dropdown-submenu {
+	position: static;
+}

@@ -48,67 +48,100 @@
 	                target: '+=1'
 	            });
 		};
-		var connectedCarousels = $('.connected-carousels');
-		if(connectedCarousels.length){
-			var carouselStage = $('.carousel-stage');
-			var carouselNavigation = $('.carousel-navigation');
-			carouselStage.
-				on('jcarousel:reload jcarousel:create', function () {
-	                var carousel = $(this),
-	                    width = carousel.innerWidth();
+		// var connectedCarousels = $('.connected-carousels');
+		// if(connectedCarousels.length){
+		// 	var carouselStage = $('.carousel-stage');
+		// 	var carouselNavigation = $('.carousel-navigation');
+		// 	carouselStage.
+		// 		on('jcarousel:reload jcarousel:create', function () {
+	 //                var carousel = $(this),
+	 //                    width = carousel.innerWidth();
 
-	                carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
-	            })
-	            .jcarousel();
+	 //                carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+	 //            })
+	 //            .jcarousel();
 
-        	carouselNavigation.jcarousel();
-	        carouselNavigation.jcarousel('items').each(function() {
-	            var item = $(this);
-	            var target = connector(item, carouselStage);
-	            item
-	                .on('jcarouselcontrol:active', function() {
-	                    carouselNavigation.jcarousel('scrollIntoView', this);
-	                    item.addClass('active');
-	                })
-	                .on('jcarouselcontrol:inactive', function() {
-	                    item.removeClass('active');
-	                })
-	                .jcarouselControl({
-	                    target: target,
-	                    carousel: carouselStage
-	                });
-	        });
-	        connectedCarousels.find('.color').on('click', function(){
-	        	var dataColor = $(this).data('color');
-	        	carouselStage.jcarousel('scroll', carouselStage.find('li[data-color='+ dataColor +']') );
-	        })
+  //       	carouselNavigation.jcarousel();
+	 //        carouselNavigation.jcarousel('items').each(function() {
+	 //            var item = $(this);
+	 //            var target = connector(item, carouselStage);
+	 //            item
+	 //                .on('jcarouselcontrol:active', function() {
+	 //                    carouselNavigation.jcarousel('scrollIntoView', this);
+	 //                    item.addClass('active');
+	 //                })
+	 //                .on('jcarouselcontrol:inactive', function() {
+	 //                    item.removeClass('active');
+	 //                })
+	 //                .jcarouselControl({
+	 //                    target: target,
+	 //                    carousel: carouselStage
+	 //                });
+	 //        });
+	 //        connectedCarousels.find('.color').on('click', function(){
+	 //        	var dataColor = $(this).data('color');
+	 //        	carouselStage.jcarousel('scroll', carouselStage.find('li[data-color='+ dataColor +']') );
+	 //        })
+		// }
+		// var prevNavigation = $('.prev-navigation');
+		// if(prevNavigation.length){
+	 //        prevNavigation
+	 //            .on('jcarouselcontrol:inactive', function() {
+	 //                $(this).addClass('inactive');
+	 //            })
+	 //            .on('jcarouselcontrol:active', function() {
+	 //                $(this).removeClass('inactive');
+	 //            })
+	 //            .jcarouselControl({
+	 //                target: '-=1'
+	 //            });
+		// }
+		// var nextNavigation = $('.next-navigation');
+		// if(nextNavigation.length){
+	 //        nextNavigation
+	 //            .on('jcarouselcontrol:inactive', function() {
+	 //                $(this).addClass('inactive');
+	 //            })
+	 //            .on('jcarouselcontrol:active', function() {
+	 //                $(this).removeClass('inactive');
+	 //            })
+	 //            .jcarouselControl({
+	 //                target: '+=1'
+	 //            });
+		// }
+
+		if($('.slider-stage').length && $('.slider-nav').length){
+			$('.slider-stage').slick({
+			  	slidesToShow: 1,
+			  	slidesToScroll: 1,
+			  	arrows: false,
+			  	fade: true,
+			  	adaptiveHeight: true,
+			  	asNavFor: '.slider-nav'
+			});
+			$('.slider-nav').slick({
+			  	slidesToShow: 4,
+			  	slidesToScroll: 1,
+			  	asNavFor: '.slider-stage',
+			  	focusOnSelect: true
+			});
 		}
-		var prevNavigation = $('.prev-navigation');
-		if(prevNavigation.length){
-	        prevNavigation
-	            .on('jcarouselcontrol:inactive', function() {
-	                $(this).addClass('inactive');
-	            })
-	            .on('jcarouselcontrol:active', function() {
-	                $(this).removeClass('inactive');
-	            })
-	            .jcarouselControl({
-	                target: '-=1'
-	            });
+
+		if( $('.slick-front').length){
+			$('.slick-front').slick({
+			  	slidesToShow: 1,
+			  	slidesToScroll: 1,
+			  	arrows: false,
+			  	fade: true,
+			  	dots: true,
+			  	adaptiveHeight: true,
+			});
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				$('.slick-front').slick('setPosition');			
+			});
 		}
-		var nextNavigation = $('.next-navigation');
-		if(nextNavigation.length){
-	        nextNavigation
-	            .on('jcarouselcontrol:inactive', function() {
-	                $(this).addClass('inactive');
-	            })
-	            .on('jcarouselcontrol:active', function() {
-	                $(this).removeClass('inactive');
-	            })
-	            .jcarouselControl({
-	                target: '+=1'
-	            });
-		}
+
+
 
 		var btnFile = $('.btn-file');
 		if(btnFile.length){

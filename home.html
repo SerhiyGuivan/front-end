@@ -9,8 +9,10 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdIqguvYD3im3dO3Oh1SZjE8De-dSgZ3Q&sensor=false"></script>
     <script src="js/gmap.js"></script>
    	<link rel="stylesheet" href="css/bootstrap.min.css">
+   	<link rel="stylesheet" href="css/slick.css">
    	<link rel="stylesheet" href="css/blueimp-gallery.min.css">
 	<link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+	<link rel="stylesheet" href="css/bootstrap-submenu.css">
    	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -37,7 +39,7 @@
 									<div class="phones">0432 60-28-05; 097 951-59-10</div>
 								</div>
 								<div>
-									<button class="btn btn-call">Связаться с нами</button>
+									<button class="btn btn-call" data-toggle="modal" data-target="#modal-form-feedback-2">Связаться с нами</button>
 								</div>
 							</div>
 						</div>
@@ -81,6 +83,189 @@
 		</nav>
 		<div class="region-middle">
 			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+						<div class="bk-front-slider" >
+							<div class="tab-header clearfix">
+								<ul>
+									<li class="active"><a href="#slider-category-discount" data-toggle="tab" title="Акции">Акции</a></li>
+									<li><a href="#slider-category-novelty" data-toggle="tab" title="Новинки">Новинки</a></li>
+									<li><a href="#slider-category-references" data-toggle="tab" title="Рекомендации">Рекомендации</a></li>
+								</ul>
+							</div>
+							<div class="tab-content">
+								<div id="slider-category-discount" class="tab-pane active">
+									<div class="slick-front">
+										<div class="item">
+											<div class="item-img-wrap">
+												<img src="img/sloder-front.jpg" alt="">
+											</div>
+											<div class="item-title">Весенние скидки!!!</div>
+											<div class="item-more-wrap">
+												<a href="#" class="item-more">Подробнее</a>
+											</div>
+										</div>
+										<div class="item">
+											<div class="item-img-wrap">
+												<img src="img/sloder-front-2.jpg" alt="">
+											</div>
+											<div class="item-title">Весенние скидки!!!</div>
+											<div class="item-more-wrap">
+												<a href="#" class="item-more">Подробнее</a>
+											</div>
+										</div>
+										<div class="item">
+											<div class="item-img-wrap">
+												<img src="img/sloder-front-3.jpg" alt="">
+											</div>
+											<div class="item-title">Весенние скидки!!!</div>
+											<div class="item-more-wrap">
+												<a href="#" class="item-more">Подробнее</a>
+											</div>
+										</div>
+									</div>			
+								</div>
+								<div id="slider-category-novelty" class="tab-pane">
+									<div class="slick-front">
+										<div class="item">
+											<div class="item-img-wrap">
+												<img src="img/sloder-front.jpg" alt="">
+											</div>
+											<div class="item-title">Весенние скидки!!!</div>
+											<div class="item-more-wrap">
+												<a href="#" class="item-more">Подробнее</a>
+											</div>
+										</div>
+										<div class="item">
+											<div class="item-img-wrap">
+												<img src="img/sloder-front-2.jpg" alt="">
+											</div>
+											<div class="item-title">Весенние скидки!!!</div>
+											<div class="item-more-wrap">
+												<a href="#" class="item-more">Подробнее</a>
+											</div>
+										</div>
+										<div class="item">
+											<div class="item-img-wrap">
+												<img src="img/sloder-front-3.jpg" alt="">
+											</div>
+											<div class="item-title">Весенние скидки!!!</div>
+											<div class="item-more-wrap">
+												<a href="#" class="item-more">Подробнее</a>
+											</div>
+										</div>
+									</div>	
+								</div>
+								<div id="slider-category-references" class="tab-pane">
+									<div class="slick-front">
+										<div class="item">
+											<div class="item-img-wrap">
+												<img src="img/sloder-front.jpg" alt="">
+											</div>
+											<div class="item-title">Весенние скидки!!!</div>
+											<div class="item-more-wrap">
+												<a href="#" class="item-more">Подробнее</a>
+											</div>
+										</div>
+										<div class="item">
+											<div class="item-img-wrap">
+												<img src="img/sloder-front-2.jpg" alt="">
+											</div>
+											<div class="item-title">Весенние скидки!!!</div>
+											<div class="item-more-wrap">
+												<a href="#" class="item-more">Подробнее</a>
+											</div>
+										</div>
+										<div class="item">
+											<div class="item-img-wrap">
+												<img src="img/sloder-front-3.jpg" alt="">
+											</div>
+											<div class="item-title">Весенние скидки!!!</div>
+											<div class="item-more-wrap">
+												<a href="#" class="item-more">Подробнее</a>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-lg-7">
+								<div class="bk-last-news-2">
+									<div class="header">
+										<div class="title">Последние новости</div>
+									</div>
+									<div class="content">
+										<div class="items">
+											<div class="item">
+												<div class="item-content">
+													Вся наша продукция соответствует не только Украинским, а и общемировым стандартам. Что подтверждается соответствующими сертификатами. 
+												</div>
+												<div class="item-more-wrap">
+													<a href="#" class="more">Подробнее</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-5">
+								<div class="bk-get-materials-1">
+									<div class="header">
+										<div class="title">Подобрать материалы</div>
+									</div>
+									<div class="content">
+											<div class="items">
+											<div class="item">
+												<div class="item-content">
+													Попробуйте подобрать подходящие  материалы с помощю 3D - конструктора 
+												</div>
+												<div class="item-more-wrap">
+													<a href="#" class="more">Подробнее</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+						<div class="bk-catalog-menu">
+							<div class="title">Каталог</div>
+							<ul class="nav navbar-nav">
+							  	<li class="active"><a href="#" tabindex="0">Битумня черепица</a></li>
+							  	<li class="dropdown">
+								    <a tabindex="0" data-toggle="dropdown" data-submenu="">Композитная черепица</a>
+								    <ul class="dropdown-menu">
+									    <li><a tabindex="0">Roser</a></li>
+									    <li><a tabindex="0">ISOLA Powertekk</a></li>
+								      	<li class="dropdown-submenu">
+								        	<a tabindex="0">Gerard</a>
+								        	<ul class="dropdown-menu">
+								          		<li><a tabindex="0">Diamant</a></li>
+								          		<li><a tabindex="0">Classic</a></li>
+								          		<li><a tabindex="0">HERITEGE</a></li>
+								          		<li><a tabindex="0">SHINGLE</a></li>
+								          		<li><a tabindex="0">SHEKE</a></li>
+								          		<li><a tabindex="0">MILANO</a></li>
+								        	</ul>
+								      	</li>
+								    </ul>
+							  	</li>
+								<li><a href="#" tabindex="0">Металлочерепица Ruukki</a></li>
+								<li><a href="#" tabindex="0">Модульная металочерепица</a></li>
+								<li><a href="#" tabindex="0">Система вентиляции VILPE</a></li>
+								<li><a href="#" tabindex="0">Водосточные системи ПВХ</a></li>
+								<li><a href="#" tabindex="0">Мансардные окна</a></li>
+								<li><a href="#" tabindex="0">Чердачные лестницы</a></li>
+								<li><a href="#" tabindex="0">Супердифузионные мембраны</a></li>
+								<li><a href="#" tabindex="0">Теплоизоляционные материалы</a></li>
+								<li><a href="#" tabindex="0">Керамическая черепица</a></li>
+							</ul>
+					     </div>
+					</div>
+				</div>
 				<div class="bk-popular-materials-1">
 					<div class="header">
 						<span class="title">Популярные материалы для кровли</span>
@@ -324,7 +509,7 @@
 						</div>
 					</div>
 					<div class="bk-ask-question-1">
-						<button class="btn-ask-question">задайте вопрос нашему менеджеру</button>
+						<button class="btn-ask-question" data-toggle="modal" data-target="#modal-form-feedback">задайте вопрос нашему менеджеру</button>
 					</div>
 				</div>
 			</div>
@@ -393,11 +578,91 @@
 	        </div>
 	    </div>
 	</div>
+	<div class="bk-form-feedback-2" >
+		<div class="modal fade" id="modal-form-feedback">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="title">задатйте вопрос нашему менеджеру</div>
+					<div class="content">
+						<form action="">
+							<div class="row">
+								<div class="form-group col-sm-6">
+									<input type="text" class="form-textfield" placeholder="Ваше имя">
+								</div>
+								<div class="form-group col-sm-6">
+									<input type="text" class="form-textfield" placeholder="Ваше e-mail:">
+								</div>
+								<div class="divider hidden-xs"></div>
+								<div class="form-group col-sm-6">
+									<input type="text" class="form-textfield" placeholder="Ваш телефон">
+								</div>
+								<div class="form-group col-sm-6">
+									<div class="btn-file">
+										<span class="btn-file-text">Прикрепить файл</span>
+										<input type="file" class="upload" />
+									</div>
+								</div>
+								<div class="divider hidden-xs"></div>
+								<div class="form-group col-sm-12">
+									<textarea name="" placeholder="Сообщение"></textarea>
+								</div>
+								<div class="form-group text-center col-sm-12">
+									<input type="submit" value="Отправить">
+								</div>
+					
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bk-form-feedback-2" >
+		<div class="modal fade" id="modal-form-feedback-2">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="title">Cвязаться с нами</div>
+					<div class="content">
+						<form action="">
+							<div class="row">
+								<div class="form-group col-sm-6">
+									<input type="text" class="form-textfield" placeholder="Ваше имя">
+								</div>
+								<div class="form-group col-sm-6">
+									<input type="text" class="form-textfield" placeholder="Ваше e-mail:">
+								</div>
+								<div class="divider hidden-xs"></div>
+								<div class="form-group col-sm-6">
+									<input type="text" class="form-textfield" placeholder="Ваш телефон">
+								</div>
+								<div class="form-group col-sm-6">
+									<div class="btn-file">
+										<span class="btn-file-text">Прикрепить файл</span>
+										<input type="file" class="upload" />
+									</div>
+								</div>
+								<div class="divider hidden-xs"></div>
+								<div class="form-group col-sm-12">
+									<textarea name="" placeholder="Сообщение"></textarea>
+								</div>
+								<div class="form-group text-center col-sm-12">
+									<input type="submit" value="Отправить">
+								</div>
+					
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Scripts -->
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-submenu.min.js"></script>
     <script src="js/jquery.blueimp-gallery.min.js"></script>
 	<script src="js/bootstrap-image-gallery.min.js"></script>
+	<script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
